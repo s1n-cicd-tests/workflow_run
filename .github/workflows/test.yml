@@ -1,7 +1,5 @@
 name: Test
 
-permissions: write-all
-
 on:
   workflow_run:
     workflows: [Run Tests]
