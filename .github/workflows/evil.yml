@@ -1,0 +1,13 @@
+name: Run Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  dummyjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post run
+        run: |
+          echo "hello world"
