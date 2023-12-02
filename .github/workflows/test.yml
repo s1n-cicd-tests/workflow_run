@@ -1,1 +1,17 @@
+name: Test
 
+on:
+  workflow_run:
+    workflows:
+      - "WR"
+    types:
+      - completed
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Step1'
+        run: |
+          echo "${{toJson(github)}}"
