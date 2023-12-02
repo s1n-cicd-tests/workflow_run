@@ -1,0 +1,11 @@
+name: "WR"
+on: 
+  push:
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    name: "init"
+    steps:
+    - run: |
+        echo "Hello"
