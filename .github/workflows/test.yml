@@ -1,6 +1,7 @@
 name: Test
 
 on:
+  issue_comment:
   workflow_run:
     workflows:
       - "WR"
@@ -16,3 +17,4 @@ jobs:
         run: |
           echo ${{ github.event.workflow_run.head_repository.full_name }}
           echo ${{ github.repository }}
+          echo ${{ github.event.comment.author_association }}
