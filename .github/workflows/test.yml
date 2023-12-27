@@ -18,3 +18,4 @@ jobs:
           echo ${{ github.event.workflow_run.head_repository.full_name }}
           echo ${{ github.repository }}
           echo ${{ github.event.comment.author_association }}
+          echo ${{ github.repository_owner }}
