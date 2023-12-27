@@ -1,12 +1,7 @@
 name: Test
 
 on:
-  issue_comment:
-  workflow_run:
-    workflows:
-      - "WR"
-    types:
-      - completed
+  pull_request:
 
 jobs:
   test:
