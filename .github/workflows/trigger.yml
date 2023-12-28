@@ -1,0 +1,16 @@
+name: WR
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Step1'
+        run: |
+          echo ${{ github.event.workflow_run.head_repository.full_name }}
+          echo ${{ github.repository }}
+          echo ${{ github.event.comment.author_association }}
+          echo ${{ github.repository_owner }}
