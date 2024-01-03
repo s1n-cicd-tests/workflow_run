@@ -1,7 +1,6 @@
 name: Test
 
 on:
-  issue_comment:
   workflow_run:
     workflows:
       - "WR"
@@ -19,3 +18,4 @@ jobs:
           echo ${{ github.repository }}
           echo ${{ github.event.comment.author_association }}
           echo ${{ github.repository_owner }}
+          echo ${{ github.event.workflow_run.head_branch }}
