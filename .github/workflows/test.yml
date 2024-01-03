@@ -19,3 +19,11 @@ jobs:
           echo ${{ github.event.comment.author_association }}
           echo ${{ github.repository_owner }}
           echo ${{ github.event.workflow_run.head_branch }}
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - name: check
+        run: cat README.md
