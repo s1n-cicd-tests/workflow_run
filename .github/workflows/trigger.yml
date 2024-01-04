@@ -1,0 +1,12 @@
+name: WR
+
+on: 
+  pull_request:
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    name: "init"
+    steps:
+    - run: |
+        echo "start"
