@@ -1,2 +1,2 @@
 # workflow_run
-a
+evil.yml !
